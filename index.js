@@ -1,25 +1,24 @@
 
+function randomInt(max){
+    return Math.floor(Math.random() * Math.floor(max))
+}
+console.log(randomInt(100))
+console.log(randomInt(10))
 
-
-function randomInt(Number) 
- {
-   if (Number==69) {
-    return true 
-   }
-    else {
-        return false }
     
-
- }; 
-
-
-    console.log(randomInt(2))
-    console.log(randomInt(78))
-    console.log(randomInt(69))
-
     function getUserGuess() {
  const  stringValue = document.getElementById('user-input').value
- return parseInt(stringValue, 69)
+ return parseInt(stringValue, 10)
     };
-    
-console.log(getUserGuess())
+
+console.log(getUserGuess());
+
+document.addEventListener('keyup', function (event){
+   
+    if (event.key === 'Enter') {
+     const guess = getGuess()
+     
+       
+ console.log(guess)
+    }
+})

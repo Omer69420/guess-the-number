@@ -5,15 +5,18 @@ function randomInt(max){
     const secretNumber = randomInt(100);
     
     console.log(secretNumber);
+
+    //part 2
     
 function getUserGuess() {
     const  guess = document.getElementById('user-input').value;
     return parseInt(guess, 10)
 }
 
-
+//part 3
 document.addEventListener('keyup', keyPress);
    
+
 function keyPress(enter) {
     if (enter.key == 'Enter') {
     console.log(getUserGuess + " " + secretNumber); 
@@ -28,7 +31,8 @@ function keyPress(enter) {
             setMessage("You are correct!");
     }
     clearInput()
-}
+    }
+//part 4
 
 function setMessage(msg){
     console.log("setMessage")
@@ -36,6 +40,7 @@ function setMessage(msg){
     textfield.innerHTML = msg;
 }
 
-    function clearInput() {
-    document.getElementById('user-input').value = "";
+    function clearInput()
+       {document.getElementById('user-input').value = "";} 
     }
+

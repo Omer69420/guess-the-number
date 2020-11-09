@@ -13,7 +13,7 @@ function getUserGuess() {
     return parseInt(guess, 10)
 }
 
-//part 3
+
 document.addEventListener('keyup', keyPress);
    
 
@@ -21,17 +21,18 @@ function keyPress(enter) {
     if (enter.key == 'Enter') {
     console.log(getUserGuess + " " + secretNumber); 
 
-    if (getUserGuess() < secretNumber){
-        setMessage("Too low!");
-    }
-    else if (getUserGuess() > secretNumber){
-        setMessage("Too high!");
-    }
-    else {
+        if (getUserGuess() < secretNumber){
+             setMessage("Too low!");
+        }
+        else if (getUserGuess() > secretNumber){
+            setMessage("Too high!");
+         }
+        else {
             setMessage("You are correct!");
-    }
-    clearInput()
-    }
+         }
+        clearInput()
+         }
+}
 //part 4
 
 function setMessage(msg){
@@ -40,7 +41,7 @@ function setMessage(msg){
     textfield.innerHTML = msg;
 }
 
-    function clearInput()
+ function clearInput()
        {document.getElementById('user-input').value = "";} 
-    }
+    
 
